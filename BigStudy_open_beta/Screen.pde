@@ -1,5 +1,5 @@
 class Screen {
-  Table questions;
+  //Table questions; This should be deleted
   String[] Questions;
   int groupsize=0;
   ArrayList<Sliders> SliderGroup = new ArrayList<Sliders>();
@@ -51,7 +51,7 @@ class Screen {
     if (mouseX  > this.NextButtonX  &&  mouseX  <  this.NextButtonX+this.ButtonWidth
       && mouseY  >  this.NextButtonY  &&  mouseY  <  this.NextButtonY+this.ButtonHeight) {
       if (this.current_questions<Questionons.size()) {
-        if (SliderGroup.get(this.current_questions).CheckIfAllAreAssesed()) {
+        if (/*true || */SliderGroup.get(this.current_questions).CheckIfAllAreAssesed()) {
           this.current_questions++;
         }
       }
@@ -59,20 +59,27 @@ class Screen {
   }
 
   void DrawButton() {
-    if (current_questions>0) {
-      Button("Back", BackButtonX, BackButtonY, ButtonWidth, ButtonHeight);
+    fill(255);
+    strokeWeight(3);
+    stroke(0);
+    Button("Back", BackButtonX, BackButtonY, ButtonWidth, ButtonHeight);
+
+    if (!SliderGroup.get(this.current_questions).CheckIfAllAreAssesed()) {
+      stroke(150);
+      fill(200);
+    } else {
+      stroke(0);
     }
-    if (current_questions < Questionons.size()) {
-      Button("Next", NextButtonX, NextButtonY, ButtonWidth, ButtonHeight);
-    }
+    Button("Next", NextButtonX, NextButtonY, ButtonWidth, ButtonHeight);
   }
 
   void Button(String string, int StartX, int StartY, int Width, int Heigth) {
-    noFill();
+
     rect(StartX, StartY, Width, Heigth, 28);
     fill(0);
     textAlign(CENTER, CENTER);
     text(string, StartX, StartY-3, Width, Heigth);  // Text wraps within text box
+    fill(255);
   }
 
   void MakeSliderGroups(ArrayList<String[]> Questiongroups) {

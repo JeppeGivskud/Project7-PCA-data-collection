@@ -1,6 +1,7 @@
 class ScreenHandler {
   ArrayList<Screen> Screens = new ArrayList<Screen>();
   int CurrentScreen=0;
+  SaveWide SaveWide;
 
   ScreenHandler(StringList Beers, int questionsPerScreen) {
     for (int i=0; i<Beers.size(); i++) {
@@ -27,15 +28,16 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
     }
     println("Saving:");
     SaveAllData();
-    exit();
+    
+    this.SaveWide = new SaveWide(Screens);
 
-    //SaveAllData();
+    exit();
   }
 
   void SaveAllData() {
     Table table= new Table();
 
-    String ID = "ID:"+millis() +"_" + second()+"_"  +hour()+"_"  +day() +"_" +month()  ;
+    String ID = "ID_"+millis() +"_" + second()+"_"  +hour()+"_"  +day() +"_" +month()  ;
     String Beer;
     String Attribute;
     int Answer;
@@ -45,19 +47,17 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
     table.addColumn("Attribute");
     table.addColumn("Answer");
 
-    Screen Screen;
-    Sliders GroupOfSliders;
     Slider Slider;
 
-    println("Screens"+Screens.size());
+    println("Beers: "+Screens.size());
     for (int o=0; o<Screens.size(); o++) {
       //Screen = Screens.get(o);
       Beer = Screens.get(o).Name;
-      println("Slidergroups"+Screens.get(o).SliderGroup.size());
+      //println("Slidergroups"+Screens.get(o).SliderGroup.size());
 
       for (int i=0; i < Screens.get(o).SliderGroup.size(); i++) {
         //GroupOfSliders = Screens.get(o).SliderGroup.get(i);
-        println("Sliders"+Screens.get(o).SliderGroup.get(i).Sliders.size());
+        // println("Sliders"+Screens.get(o).SliderGroup.get(i).Sliders.size());
 
         for (int j=0; j<Screens.get(o).SliderGroup.get(i).Sliders.size(); j++) {
           Slider = Screens.get(o).SliderGroup.get(i).Sliders.get(j);
@@ -70,20 +70,20 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
           row.setString("Beer", Beer);
           row.setString("Attribute", Attribute);
           row.setInt("Answer", Answer);
-          println(ID+"ID-"+Beer+"Beer-"+Attribute+"Attribute-"+Answer+"Answer-");
+          //println(ID+"ID-"+Beer+"Beer-"+Attribute+"Attribute-"+Answer+"Answer-");
         }
       }
     }
-    saveTable(table, "data/"+ID+".csv");
-    AppendMegatable(table);
+    saveTable(table, "data/Long/"+ID+".csv");
+    AppendMegatable(table,"data/MegaTables/MEGATABLE_LONG.csv");
   }
 
 
-  void AppendMegatable(Table Newtable) {
+  void AppendMegatable(Table Newtable, String Path) {
 
-    Table table = loadTable("MEGATABLE.csv", "header");
+    Table table = loadTable(Path, "header");
     try {
-      saveTable(table, "MEGATABLE.csv");
+      saveTable(table, Path);
     }
     catch(Exception e) {
       table= new Table();
@@ -91,7 +91,7 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
       table.addColumn("Beer");
       table.addColumn("Attribute");
       table.addColumn("Answer");
-      saveTable(table, "MEGATABLE.csv");
+      saveTable(table, Path);
     }
 
     for (TableRow row : Newtable.rows()) {
@@ -109,7 +109,7 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
       newRow.setString("Attribute", Attribute);
       newRow.setInt("Answer", Answer);
     }
-    saveTable(table, "MEGATABLE.csv");
+    saveTable(table, Path);
   }
 
   void CurrentBeerText() {
@@ -130,30 +130,3 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
     }
   }
 }
-
-/*
-    for (int ost=0; ost<Screens.size(); ost++) {
- Screen = Screens.get(ost);
- Beer = Screen.Name;
- println("Slidergroups"+Screen.SliderGroup.size());
- 
- for (int i=0; i < Screen.SliderGroup.size(); i++) {
- GroupOfSliders = Screen.SliderGroup.get(i);
- println("Sliders"+GroupOfSliders.Sliders.size());
- 
- for (int j=0; i<GroupOfSliders.Sliders.size(); i++) {
- Slider = GroupOfSliders.Sliders.get(j);
- 
- Attribute = Slider.Question;
- Answer=Slider.Value;
- 
- TableRow row = table.addRow();
- row.setString("id", ID);
- row.setString("Beer", Beer);
- row.setString("Attribute", Attribute);
- row.setInt("Answer", Answer);
- println(ID+"ID-"+Beer+"Beer-"+Attribute+"Attribute-"+Answer+"Answer-");
- }
- }
- }
- */

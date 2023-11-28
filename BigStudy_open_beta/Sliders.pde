@@ -6,7 +6,7 @@ class Sliders {
   Sliders(String[] Questions) {
     this.Amount=Questions.length;
     for (int i=0; i<this.Amount; i++) {
-      Sliders.add(new Slider(40, 90+i*100, width-80, Questions[i]));
+      Sliders.add(new Slider(40, 90+i*100, width-300, Questions[i]));
     }
     Values = new int[Sliders.size()];
   }
@@ -24,7 +24,6 @@ class Sliders {
       Slider.Draw();
     }
   }
-
 }
 
 
