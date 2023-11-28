@@ -14,3 +14,4 @@ These functions would be nice:
 - A welcome screen in which the participant can try to use the scale.
 - A counter for which number the beer is rated (is it the first or the fourth beer?)
 - A counter for how many attributes have been rated. Maybe this fucks up data?
+- An indication of where the person is in the screens and which beer out of how many beers
