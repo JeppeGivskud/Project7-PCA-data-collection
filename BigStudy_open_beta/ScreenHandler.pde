@@ -15,11 +15,12 @@ class ScreenHandler {
 Der er problemer med at gemme dataen og der er problemer med flowet af programmet. Hvis du går igennem fra toppen burde det vise sig selv
    */
   void Draw() {
-    CurrentBeerText();
 
     if (CurrentScreen<Screens.size()) {
       if (!Screens.get(CurrentScreen).NextScreenRequest()) {
         Screens.get(CurrentScreen).Draw();
+        CurrentBeerText();
+
         return;
       } else {
         println(Screens.get(CurrentScreen).Name+" is done");
@@ -39,8 +40,10 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
     fill(0, 0, 0);
     textSize(20);
     textAlign(CENTER, CENTER);
-    int value = CurrentScreen+1;
-    text("Beer "+value, width/2, height-55);
+    int BeerNumber = CurrentScreen+1;
+    int ScreenNumber = Screens.get(CurrentScreen).current_questions+1;
+    text("Beer "+BeerNumber+"/"+Screens.size(), width/2, height-55);
+    text("Screen "+ScreenNumber+"/"+Screens.get(CurrentScreen).SliderGroup.size(), width/2, height-80);
     //rect(0, height-20, (width/Screens.size())/2+(CurrentScreen)*width/Screens.size(), 20);
   }
 

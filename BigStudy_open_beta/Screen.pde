@@ -1,4 +1,4 @@
-class Screen {
+class Screen { //<>//
   //Table questions; This should be deleted
   String[] Attributes;
   int groupsize=0;
@@ -8,8 +8,8 @@ class Screen {
 
   String Name;
 
-  NavigationButton BackButton = new NavigationButton("Back", width/8, height-75, 2*width/8, 50);
-  NavigationButton NextButton = new NavigationButton("Next", 5*width/8, height-75, 2*width/8, 50);
+  NavigationButton BackButton = new NavigationButton("Tilbage", width/8, height-75, 2*width/8, 50);
+  NavigationButton NextButton = new NavigationButton("Næste", 5*width/8, height-75, 2*width/8, 50);
 
   Screen(String Name, int questionsPerScreen) {
     this.Name=Name;
@@ -22,14 +22,15 @@ class Screen {
   }
 
   void Draw() {
-    SliderGroup.get(this.current_questions).Draw();
     HandleButtons();
-    
+
+    SliderGroup.get(this.current_questions).Draw();
+
     //TESTCASE
     //current_questions++;
   }
 
-//Buttons
+  //Buttons
   void HandleButtons() {
     BackButton.Draw();
     NextButton.Draw();
@@ -56,7 +57,7 @@ class Screen {
     }
     return false;
   }
-  
+
   //Questions/Attributes
   void LoadQuestions() {
     this.Attributes = loadStrings("Attributes.csv");
@@ -86,10 +87,13 @@ class Screen {
         //println(i);
         //println(Questions.length-groupsize);
       }
+      return; //If there are no problems sepperating the groups the rest of the code is not run
     }
+
     catch (Exception e) {
       println("We failed at "+counter);
     }
+
     int newcounter=0;
     boolean success=false;
     for (int i = 0; i<groupsize; i++) {

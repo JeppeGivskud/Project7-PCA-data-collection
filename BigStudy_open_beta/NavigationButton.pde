@@ -32,7 +32,8 @@ class NavigationButton {
 
   boolean IsMouseOverButton() {
     if (mouseX  > this.Xpos  &&  mouseX  <  this.Xpos+Width
-      && mouseY  >  this.Ypos  &&  mouseY  <  this.Ypos+Height) {
+      && mouseY  >  this.Ypos  &&  mouseY  <  this.Ypos+Height
+      && this.CanBePressed) {
       return true;
     }
     return false;

@@ -14,20 +14,20 @@ class SaveLong {
 
   void SaveIndividual() {
     this.newTable = new Table();
-    String Beer;
-    String Attribute;
-    int Answer;
 
     this.newTable.addColumn("ID");
     this.newTable.addColumn("Beer");
     this.newTable.addColumn("Attribute");
     this.newTable.addColumn("Answer");
+    this.newTable.addColumn("Beer_order");
+    this.newTable.addColumn("Attribute_order");
+    this.newTable.addColumn("Attribute_order_absolute");
 
     Slider Slider;
 
     println("Beers: "+Screens.size());
     for (int o=0; o<Screens.size(); o++) { //For alle screens
-      Beer = Screens.get(o).Name;
+      String Beer = Screens.get(o).Name;
 
       for (int i=0; i < Screens.get(o).SliderGroup.size(); i++) {
 
@@ -35,14 +35,25 @@ class SaveLong {
 
           Slider = Screens.get(o).SliderGroup.get(i).Sliders.get(j);
 
-          Attribute = Slider.Question;
-          Answer=Slider.Value;
+          String Attribute = Slider.Question;
+          int Answer=Slider.Value;
+
+          int Beer_order=o+1;
+
+          //The order is defined as the the current attribute group * that groups size + the current slider j
+          int Attribute_order=i*Screens.get(o).SliderGroup.get(i).Amount+j+1;
+
+          //The absolute order just adds attribute length for each new beer (o)
+          int Attribute_order_absolute=Attribute_order+o*Screens.get(o).Attributes.length;
 
           TableRow row = this.newTable.addRow();
           row.setString("ID", this.ID);
           row.setString("Beer", Beer);
           row.setString("Attribute", Attribute);
           row.setInt("Answer", Answer);
+          row.setInt("Beer_order", Beer_order);
+          row.setInt("Attribute_order", Attribute_order);
+          row.setInt("Attribute_order_absolute", Attribute_order_absolute);
           //println(ID+"ID-"+Beer+"Beer-"+Attribute+"Attribute-"+Answer+"Answer-");
         }
       }
@@ -63,6 +74,10 @@ class SaveLong {
       this.oldTable.addColumn("Beer");
       this.oldTable.addColumn("Attribute");
       this.oldTable.addColumn("Answer");
+      this.oldTable.addColumn("Beer_order");
+      this.oldTable.addColumn("Attribute_order");
+      this.oldTable.addColumn("Attribute_order_absolute");
+
       saveTable(this.oldTable, Path);
     }
 
@@ -71,6 +86,9 @@ class SaveLong {
       String Beer = row.getString("Beer");
       String Attribute=row.getString("Attribute");
       int Answer = row.getInt("Answer");
+      int Beer_order = row.getInt("Beer_order");
+      int Attribute_order = row.getInt("Attribute_order");
+      int Attribute_order_absolute = row.getInt("Attribute_order_absolute");
 
       //Append the original table with new row and values
       TableRow newRow = this.oldTable.addRow();
@@ -78,6 +96,9 @@ class SaveLong {
       newRow.setString("Beer", Beer);
       newRow.setString("Attribute", Attribute);
       newRow.setInt("Answer", Answer);
+      newRow.setInt("Beer_order", Beer_order);
+      newRow.setInt("Attribute_order", Attribute_order);
+      newRow.setInt("Attribute_order_absolute", Attribute_order_absolute);
     }
     saveTable(this.oldTable, Path);
   }
