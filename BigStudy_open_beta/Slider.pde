@@ -16,8 +16,15 @@ class Slider {
     Markers = new StringList();
     Markers();
     CreateXPositions();
-  }
 
+    /*//TESTCASE;
+    this.valueSelected=true;
+    this.Value=round(random(0, this.Markers.size()-1));*/
+  }
+  
+
+  
+  
   void Draw() {
     strokeWeight(2);
     stroke(200);
@@ -65,6 +72,7 @@ class Slider {
       circle(this.Placements[i], this.StartY, 25);
     }
   }
+
 
   void CheckMouse() {
     if (mousePressed == true) { //Registers a mousepress and logs the value

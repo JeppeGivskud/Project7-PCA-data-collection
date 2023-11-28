@@ -2,62 +2,24 @@ class SaveWide {
   Table newTable;
   Table oldTable;
   ArrayList<Screen> Screens;
+  String ID;
 
-
-  SaveWide(ArrayList<Screen> Screens) {
+  SaveWide(String ID, ArrayList<Screen> Screens) {
+    this.ID=ID;
     this.Screens=Screens;
     SaveIndividual();
     AppendOldTable("data/MegaTables/MEGATABLE_WIDE.csv");
   }
 
-  void AppendOldTable(String path) {
-    this.oldTable = loadTable(path, "header");
-
-    StringList Attributes = new StringList();
-    Attributes.append(loadStrings("Questions.csv"));
-
-    try {
-      saveTable(this.oldTable, path);
-    }
-
-    catch(Exception e) {
-      this.oldTable= new Table();
-      this.oldTable.addColumn("ID");
-      this.oldTable.addColumn("Beer");
-      for (String Attribute : Attributes) {
-        this.oldTable.addColumn(Attribute);
-      }
-      saveTable(this.oldTable, path);
-    }
-    //For each row in newTable
-    for (int row=0; row<newTable.getRowCount(); row++) {
-      TableRow newRow = oldTable.addRow();
-      String ID = newTable.getString(row, "ID");
-      String Beer=newTable.getString(row, "Beer");
-      newRow.setString("ID", ID);
-      newRow.setString("Beer", Beer);
-
-      //For each column in newtable except the first two because ID and Beer
-      for (int column=2; column<oldTable.getColumnCount(); column++) {
-        int value=newTable.getInt(row, column);
-        newRow.setInt(column, value)  ;
-      }
-    }
-
-    saveTable(this.oldTable, path);
-  }
-
   void SaveIndividual() {
     //Create table
     this.newTable= new Table();
-
-    String ID = "ID_"+millis() +"_" + second()+"_"  +hour()+"_"  +day() +"_" +month();
     String Beer;
     String Attribute;
     int Answer;
 
     StringList Attributes = new StringList();
-    Attributes.append(loadStrings("Questions.csv"));
+    Attributes.append(loadStrings("Attributes.csv"));
 
     this.newTable.addColumn("ID");
     this.newTable.addColumn("Beer");
@@ -76,7 +38,7 @@ class SaveWide {
       println("Slidergroups"+Screens.get(o).SliderGroup.size());
 
       TableRow row = this.newTable.addRow(); //Byg en ny row som man kan lægge nogle værdier ind i
-      row.setString("ID", ID);
+      row.setString("ID", this.ID);
       row.setString("Beer", Beer);
 
       for (int i=0; i < Screens.get(o).SliderGroup.size(); i++) { //loop ned til skærm
@@ -93,6 +55,42 @@ class SaveWide {
         }
       }
     }
-    saveTable(this.newTable, "data/Wide/"+ID+"Wide"+".csv");
+    saveTable(this.newTable, "data/Wide/"+this.ID+"Wide"+".csv");
+  }
+  void AppendOldTable(String path) {
+    this.oldTable = loadTable(path, "header");
+
+    StringList Attributes = new StringList();
+    Attributes.append(loadStrings("Attributes.csv"));
+
+    try {
+      saveTable(this.oldTable, path);
+    }
+
+    catch(Exception e) {
+      this.oldTable= new Table();
+      this.oldTable.addColumn("ID");
+      this.oldTable.addColumn("Beer");
+      for (String Attribute : Attributes) {
+        this.oldTable.addColumn(Attribute);
+      }
+      saveTable(this.oldTable, path);
+    }
+    //For each row in newTable
+    for (int row=0; row<newTable.getRowCount(); row++) {
+      TableRow newRow = oldTable.addRow();
+      
+      String Beer=newTable.getString(row, "Beer");
+      newRow.setString("ID", this.ID);
+      newRow.setString("Beer", Beer);
+
+      //For each column in newtable except the first two because ID and Beer
+      for (int column=2; column<oldTable.getColumnCount(); column++) {
+        int value=newTable.getInt(row, column);
+        newRow.setInt(column, value)  ;
+      }
+    }
+
+    saveTable(this.oldTable, path);
   }
 }

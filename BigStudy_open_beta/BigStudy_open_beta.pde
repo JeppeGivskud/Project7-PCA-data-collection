@@ -28,5 +28,5 @@ void mouseReleased() {
     BeerCheckBoxes.WhichBoxesAreChecked();
     return;
   }
-  ScreenHandler.CheckMousePosition();
+  ScreenHandler.MouseReleased();
 }

@@ -12,6 +12,8 @@ class BeerCheckBox {
     this.Width=Width;
     this.Height=Height;
     this.Name=Name;
+
+
   }
 
   void Draw() {

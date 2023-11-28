@@ -1,106 +1,75 @@
 class Screen {
   //Table questions; This should be deleted
-  String[] Questions;
+  String[] Attributes;
   int groupsize=0;
   ArrayList<Sliders> SliderGroup = new ArrayList<Sliders>();
-  ArrayList<String[]> Questionons = new ArrayList<String[]>();
+  ArrayList<String[]> AttributesList = new ArrayList<String[]>();
   int current_questions=0;
 
   String Name;
 
-  //Åndsvag løsning:
-  int BackButtonX   =width/8;
-  int BackButtonY   =height-75;
-  int NextButtonX   =5*width/8;
-  int NextButtonY   =height-75;
-  int ButtonWidth   =2*width/8;
-  int ButtonHeight  =50;
+  NavigationButton BackButton = new NavigationButton("Back", width/8, height-75, 2*width/8, 50);
+  NavigationButton NextButton = new NavigationButton("Next", 5*width/8, height-75, 2*width/8, 50);
 
   Screen(String Name, int questionsPerScreen) {
     this.Name=Name;
     LoadQuestions();
     RandomizeQuestions();
     Sepperate_into_groups(questionsPerScreen);
-    println("Questions: "+Questions.length);
-    println(Questionons.size()+" Groups with size: "+groupsize);
-    MakeSliderGroups(Questionons);
+    println("Questions: "+Attributes.length);
+    println(AttributesList.size()+" Groups with size: "+groupsize);
+    MakeSliderGroups(AttributesList);
   }
 
   void Draw() {
     SliderGroup.get(this.current_questions).Draw();
-    DrawButton();
+    HandleButtons();
+    
+    //TESTCASE
+    //current_questions++;
+  }
+
+//Buttons
+  void HandleButtons() {
+    BackButton.Draw();
+    NextButton.Draw();
+
+    if (SliderGroup.get(this.current_questions).CheckIfAllAreAssesed()) {
+      NextButton.CanBePressed(true);
+    } else NextButton.CanBePressed(false);
+
+    if (current_questions>0) {
+      BackButton.CanBePressed(true);
+    } else BackButton.CanBePressed(false);
+  }
+
+  void MouseReleased() {
+    if (BackButton.IsMouseOverButton()) current_questions--;
+    if (NextButton.IsMouseOverButton()) current_questions++;
   }
 
   boolean NextScreenRequest() {
-    if (this.current_questions>Questionons.size()-1) {
+    if (this.current_questions>AttributesList.size()-1) {
       //When there are no more questions and the next button is clicked
       //this will return true so the next screen can be showed
       return true;
     }
     return false;
   }
-
-  void IsMouseOverButtons() {
-
-    if (mouseX  > this.BackButtonX  &&  mouseX  <  this.BackButtonX+ButtonWidth
-      && mouseY  >  this.BackButtonY  &&  mouseY  <  this.BackButtonY+ButtonHeight) {
-      if (this.current_questions>0) {
-        this.current_questions--;
-      }
-    }
-    if (mouseX  > this.NextButtonX  &&  mouseX  <  this.NextButtonX+this.ButtonWidth
-      && mouseY  >  this.NextButtonY  &&  mouseY  <  this.NextButtonY+this.ButtonHeight) {
-      if (this.current_questions<Questionons.size()) {
-        if (/*true || */SliderGroup.get(this.current_questions).CheckIfAllAreAssesed()) {
-          this.current_questions++;
-        }
-      }
-    }
-  }
-
-  void DrawButton() {
-    fill(255);
-    strokeWeight(3);
-    stroke(0);
-    Button("Back", BackButtonX, BackButtonY, ButtonWidth, ButtonHeight);
-
-    if (!SliderGroup.get(this.current_questions).CheckIfAllAreAssesed()) {
-      stroke(150);
-      fill(200);
-    } else {
-      stroke(0);
-    }
-    Button("Next", NextButtonX, NextButtonY, ButtonWidth, ButtonHeight);
-  }
-
-  void Button(String string, int StartX, int StartY, int Width, int Heigth) {
-
-    rect(StartX, StartY, Width, Heigth, 28);
-    fill(0);
-    textAlign(CENTER, CENTER);
-    text(string, StartX, StartY-3, Width, Heigth);  // Text wraps within text box
-    fill(255);
-  }
-
-  void MakeSliderGroups(ArrayList<String[]> Questiongroups) {
-    for (String[] questions : Questiongroups) {
-      //Tilføj en ny slidergroup med questions
-      SliderGroup.add(new Sliders(questions));
-    }
-  }
-
+  
+  //Questions/Attributes
   void LoadQuestions() {
-    this.Questions = loadStrings("Questions.csv");
+    this.Attributes = loadStrings("Attributes.csv");
   }
 
   void RandomizeQuestions() {
     StringList Randomized = new StringList();
-    Randomized.append(this.Questions);
+    Randomized.append(this.Attributes);
     Randomized.shuffle();
 
     int i=0;
     for (String Question : Randomized) {
-      this.Questions[i]=Question;
+      this.Attributes[i]=Question;
       i++;
     }
   }
@@ -110,10 +79,10 @@ class Screen {
     int counter=0;
 
     try {
-      for (int i=0; i<Questions.length; i+=groupsize) {
+      for (int i=0; i<Attributes.length; i+=groupsize) {
         counter=i;
-        String[] TempStringArray = subset(Questions, i, groupsize);
-        Questionons.add(TempStringArray);
+        String[] TempStringArray = subset(Attributes, i, groupsize);
+        AttributesList.add(TempStringArray);
         //println(i);
         //println(Questions.length-groupsize);
       }
@@ -127,8 +96,8 @@ class Screen {
       newcounter=i;
       if (!success) {
         try {
-          String[] TempStringArray = subset(Questions, counter, groupsize-i);
-          Questionons.add(TempStringArray);
+          String[] TempStringArray = subset(Attributes, counter, groupsize-i);
+          AttributesList.add(TempStringArray);
           println("SUCCES");
           success=true;
         }
@@ -136,6 +105,13 @@ class Screen {
           println("Failed at combining with "+newcounter+" new values");
         }
       }
+    }
+  }
+
+  void MakeSliderGroups(ArrayList<String[]> Questiongroups) {
+    for (String[] questions : Questiongroups) {
+      //Tilføj en ny slidergroup med questions
+      SliderGroup.add(new Sliders(questions));
     }
   }
 }

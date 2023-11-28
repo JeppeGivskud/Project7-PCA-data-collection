@@ -18,6 +18,17 @@ class BeerCheckBoxes {
       println("Continue removed");
     }
 
+    /*//TESTCASE
+    for (BeerCheckBox BeerCheckBox : AllBoxes) {
+      BeerCheckBox.IsChecked=true;
+    }
+    IsBeersChosen=true;
+    for (int i=0; i<AllBoxes.size(); i++) {
+      ChoosenBeers.append(AllBoxes.get(i).Name);
+      println("Appended: "+AllBoxes.get(i).Name);
+    }
+    //END testcase */
+
     for (int i=0; i<AllBoxes.size(); i++) {
       AllBoxes.get(i).Draw();
       fill(0);
