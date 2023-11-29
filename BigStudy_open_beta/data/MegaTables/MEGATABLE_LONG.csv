@@ -1,0 +1,169 @@
+ID,Beer,Attribute,Answer,Beer_order,Attribute_order,Attribute_order_absolute
+ID_7038_38_14__10_29_11,Sebastian,Rugbrød,4,1,1,1
+ID_7038_38_14__10_29_11,Sebastian,Karamel,3,1,2,2
+ID_7038_38_14__10_29_11,Sebastian,Humlet,1,1,3,3
+ID_7038_38_14__10_29_11,Sebastian,Røget,2,1,4,4
+ID_7038_38_14__10_29_11,Sebastian,Gran,5,1,5,5
+ID_7038_38_14__10_29_11,Sebastian,Kompleks,5,1,6,6
+ID_7038_38_14__10_29_11,Sebastian,Harmonisk,5,1,7,7
+ID_7038_38_14__10_29_11,Sebastian,Syrlig,3,1,8,8
+ID_7038_38_14__10_29_11,Sebastian,Vandet,3,1,9,9
+ID_7038_38_14__10_29_11,Sebastian,Olie,2,1,10,10
+ID_7038_38_14__10_29_11,Sebastian,Spiritus,3,1,11,11
+ID_7038_38_14__10_29_11,Sebastian,Lakrids,1,1,12,12
+ID_7038_38_14__10_29_11,Sebastian,Maltede,4,1,13,13
+ID_7038_38_14__10_29_11,Sebastian,Rund,2,1,14,14
+ID_7038_38_14__10_29_11,Sebastian,Eftersmag,2,1,15,15
+ID_7038_38_14__10_29_11,Sebastian,Tør,0,1,16,16
+ID_7038_38_14__10_29_11,Sebastian,Bitter,1,1,17,17
+ID_7038_38_14__10_29_11,Sebastian,Citrus,0,1,18,18
+ID_7038_38_14__10_29_11,Sebastian,Sød,0,1,19,19
+ID_7038_38_14__10_29_11,Sebastian,Kaffe,5,1,20,20
+ID_7038_38_14__10_29_11,Sebastian,Blomst,0,1,21,21
+ID_7038_38_14__10_29_11,Sebastian,Kraftig,4,1,22,22
+ID_7038_38_14__10_29_11,Sebastian,Brændt,6,1,23,23
+ID_7038_38_14__10_29_11,Sebastian,Tung,2,1,24,24
+ID_7038_38_14__10_29_11,Sebastian,Mild,4,1,25,25
+ID_7038_38_14__10_29_11,Sebastian,Sprittet,1,1,26,26
+ID_7038_38_14__10_29_11,Sebastian,Frugtig,1,1,27,27
+ID_7038_38_14__10_29_11,Sebastian,Hav,4,1,28,28
+ID_7038_38_14__10_29_11,Sebastian,Bær,5,1,29,29
+ID_7038_38_14__10_29_11,Sebastian,Sodavand,2,1,30,30
+ID_7038_38_14__10_29_11,Sebastian,"Syntetisk ",5,1,31,31
+ID_7038_38_14__10_29_11,Sebastian,Gæret,1,1,32,32
+ID_7038_38_14__10_29_11,Sebastian,Nøddeagtig,1,1,33,33
+ID_7038_38_14__10_29_11,Sebastian,Skarp,0,1,34,34
+ID_7038_38_14__10_29_11,Sebastian,Normal,3,1,35,35
+ID_7038_38_14__10_29_11,Sebastian,Krydret,3,1,36,36
+ID_7038_38_14__10_29_11,Sebastian,Cider,4,1,37,37
+ID_7038_38_14__10_29_11,Sebastian,Brus,3,1,38,38
+ID_7038_38_14__10_29_11,Sebastian,Aroma,4,1,39,39
+ID_7038_38_14__10_29_11,Sebastian,Chokolade,1,1,40,40
+ID_7038_38_14__10_29_11,Sebastian,Værtshus,3,1,41,41
+ID_7038_38_14__10_29_11,Sebastian,Rengøringsmiddel,3,1,42,42
+ID_7038_38_14__10_29_11,Amigo,Mild,5,2,1,43
+ID_7038_38_14__10_29_11,Amigo,"Syntetisk ",1,2,2,44
+ID_7038_38_14__10_29_11,Amigo,Krydret,2,2,3,45
+ID_7038_38_14__10_29_11,Amigo,Karamel,2,2,4,46
+ID_7038_38_14__10_29_11,Amigo,Lakrids,4,2,5,47
+ID_7038_38_14__10_29_11,Amigo,Syrlig,3,2,6,48
+ID_7038_38_14__10_29_11,Amigo,Sød,4,2,7,49
+ID_7038_38_14__10_29_11,Amigo,Cider,1,2,8,50
+ID_7038_38_14__10_29_11,Amigo,Værtshus,5,2,9,51
+ID_7038_38_14__10_29_11,Amigo,Sprittet,4,2,10,52
+ID_7038_38_14__10_29_11,Amigo,Frugtig,0,2,11,53
+ID_7038_38_14__10_29_11,Amigo,Nøddeagtig,5,2,12,54
+ID_7038_38_14__10_29_11,Amigo,Kompleks,1,2,13,55
+ID_7038_38_14__10_29_11,Amigo,Blomst,0,2,14,56
+ID_7038_38_14__10_29_11,Amigo,Skarp,5,2,15,57
+ID_7038_38_14__10_29_11,Amigo,Brus,5,2,16,58
+ID_7038_38_14__10_29_11,Amigo,Brændt,2,2,17,59
+ID_7038_38_14__10_29_11,Amigo,Tør,1,2,18,60
+ID_7038_38_14__10_29_11,Amigo,Spiritus,4,2,19,61
+ID_7038_38_14__10_29_11,Amigo,Olie,1,2,20,62
+ID_7038_38_14__10_29_11,Amigo,Vandet,3,2,21,63
+ID_7038_38_14__10_29_11,Amigo,Humlet,2,2,22,64
+ID_7038_38_14__10_29_11,Amigo,Eftersmag,1,2,23,65
+ID_7038_38_14__10_29_11,Amigo,Maltede,0,2,24,66
+ID_7038_38_14__10_29_11,Amigo,Gran,1,2,25,67
+ID_7038_38_14__10_29_11,Amigo,Kraftig,6,2,26,68
+ID_7038_38_14__10_29_11,Amigo,Rund,4,2,27,69
+ID_7038_38_14__10_29_11,Amigo,Tung,5,2,28,70
+ID_7038_38_14__10_29_11,Amigo,Rengøringsmiddel,2,2,29,71
+ID_7038_38_14__10_29_11,Amigo,Bitter,4,2,30,72
+ID_7038_38_14__10_29_11,Amigo,Kaffe,5,2,31,73
+ID_7038_38_14__10_29_11,Amigo,Bær,1,2,32,74
+ID_7038_38_14__10_29_11,Amigo,Hav,4,2,33,75
+ID_7038_38_14__10_29_11,Amigo,Sodavand,5,2,34,76
+ID_7038_38_14__10_29_11,Amigo,Normal,5,2,35,77
+ID_7038_38_14__10_29_11,Amigo,Røget,1,2,36,78
+ID_7038_38_14__10_29_11,Amigo,Gæret,4,2,37,79
+ID_7038_38_14__10_29_11,Amigo,Aroma,1,2,38,80
+ID_7038_38_14__10_29_11,Amigo,Chokolade,1,2,39,81
+ID_7038_38_14__10_29_11,Amigo,Rugbrød,5,2,40,82
+ID_7038_38_14__10_29_11,Amigo,Citrus,4,2,41,83
+ID_7038_38_14__10_29_11,Amigo,Harmonisk,4,2,42,84
+ID_45330_8_30__12_29_11,Angelina,Rugbrød,5,1,1,1
+ID_45330_8_30__12_29_11,Angelina,Syrlig,4,1,2,2
+ID_45330_8_30__12_29_11,Angelina,Krydret,4,1,3,3
+ID_45330_8_30__12_29_11,Angelina,Humlet,4,1,4,4
+ID_45330_8_30__12_29_11,Angelina,Tør,3,1,5,5
+ID_45330_8_30__12_29_11,Angelina,Værtshus,3,1,6,6
+ID_45330_8_30__12_29_11,Angelina,Tung,4,1,7,7
+ID_45330_8_30__12_29_11,Angelina,Skarp,4,1,8,8
+ID_45330_8_30__12_29_11,Angelina,Gran,4,1,9,9
+ID_45330_8_30__12_29_11,Angelina,Brus,4,1,10,10
+ID_45330_8_30__12_29_11,Angelina,Brændt,4,1,11,11
+ID_45330_8_30__12_29_11,Angelina,Sodavand,4,1,12,12
+ID_45330_8_30__12_29_11,Angelina,Spiritus,4,1,13,13
+ID_45330_8_30__12_29_11,Angelina,Olie,4,1,14,14
+ID_45330_8_30__12_29_11,Angelina,Aroma,4,1,15,15
+ID_45330_8_30__12_29_11,Angelina,Vandet,4,1,16,16
+ID_45330_8_30__12_29_11,Angelina,Chokolade,4,1,17,17
+ID_45330_8_30__12_29_11,Angelina,"Syntetisk ",4,1,18,18
+ID_45330_8_30__12_29_11,Angelina,Sød,4,1,19,19
+ID_45330_8_30__12_29_11,Angelina,Røget,4,1,20,20
+ID_45330_8_30__12_29_11,Angelina,Rengøringsmiddel,4,1,21,21
+ID_45330_8_30__12_29_11,Angelina,Bitter,4,1,22,22
+ID_45330_8_30__12_29_11,Angelina,Frugtig,4,1,23,23
+ID_45330_8_30__12_29_11,Angelina,Karamel,4,1,24,24
+ID_45330_8_30__12_29_11,Angelina,Gæret,4,1,25,25
+ID_45330_8_30__12_29_11,Angelina,Bær,4,1,26,26
+ID_45330_8_30__12_29_11,Angelina,Maltede,4,1,27,27
+ID_45330_8_30__12_29_11,Angelina,Kraftig,4,1,28,28
+ID_45330_8_30__12_29_11,Angelina,Nøddeagtig,4,1,29,29
+ID_45330_8_30__12_29_11,Angelina,Mild,4,1,30,30
+ID_45330_8_30__12_29_11,Angelina,Harmonisk,4,1,31,31
+ID_45330_8_30__12_29_11,Angelina,Kaffe,4,1,32,32
+ID_45330_8_30__12_29_11,Angelina,Rund,4,1,33,33
+ID_45330_8_30__12_29_11,Angelina,Sprittet,4,1,34,34
+ID_45330_8_30__12_29_11,Angelina,Lakrids,4,1,35,35
+ID_45330_8_30__12_29_11,Angelina,Eftersmag,4,1,36,36
+ID_45330_8_30__12_29_11,Angelina,Normal,4,1,37,37
+ID_45330_8_30__12_29_11,Angelina,Kompleks,4,1,38,38
+ID_45330_8_30__12_29_11,Angelina,Blomst,4,1,39,39
+ID_45330_8_30__12_29_11,Angelina,Cider,4,1,40,40
+ID_45330_8_30__12_29_11,Angelina,Citrus,4,1,41,41
+ID_45330_8_30__12_29_11,Angelina,Hav,4,1,42,42
+ID_45330_8_30__12_29_11,Brown Bella,Gæret,4,2,1,43
+ID_45330_8_30__12_29_11,Brown Bella,Karamel,4,2,2,44
+ID_45330_8_30__12_29_11,Brown Bella,Brus,4,2,3,45
+ID_45330_8_30__12_29_11,Brown Bella,Værtshus,4,2,4,46
+ID_45330_8_30__12_29_11,Brown Bella,Kraftig,4,2,5,47
+ID_45330_8_30__12_29_11,Brown Bella,Kompleks,4,2,6,48
+ID_45330_8_30__12_29_11,Brown Bella,Røget,4,2,7,49
+ID_45330_8_30__12_29_11,Brown Bella,Aroma,4,2,8,50
+ID_45330_8_30__12_29_11,Brown Bella,Sprittet,4,2,9,51
+ID_45330_8_30__12_29_11,Brown Bella,Eftersmag,4,2,10,52
+ID_45330_8_30__12_29_11,Brown Bella,Tung,4,2,11,53
+ID_45330_8_30__12_29_11,Brown Bella,Lakrids,4,2,12,54
+ID_45330_8_30__12_29_11,Brown Bella,Bitter,4,2,13,55
+ID_45330_8_30__12_29_11,Brown Bella,Cider,4,2,14,56
+ID_45330_8_30__12_29_11,Brown Bella,Syrlig,4,2,15,57
+ID_45330_8_30__12_29_11,Brown Bella,Tør,4,2,16,58
+ID_45330_8_30__12_29_11,Brown Bella,Frugtig,4,2,17,59
+ID_45330_8_30__12_29_11,Brown Bella,Bær,4,2,18,60
+ID_45330_8_30__12_29_11,Brown Bella,Kaffe,4,2,19,61
+ID_45330_8_30__12_29_11,Brown Bella,Nøddeagtig,4,2,20,62
+ID_45330_8_30__12_29_11,Brown Bella,Rugbrød,4,2,21,63
+ID_45330_8_30__12_29_11,Brown Bella,Chokolade,4,2,22,64
+ID_45330_8_30__12_29_11,Brown Bella,Sød,4,2,23,65
+ID_45330_8_30__12_29_11,Brown Bella,Brændt,4,2,24,66
+ID_45330_8_30__12_29_11,Brown Bella,Hav,4,2,25,67
+ID_45330_8_30__12_29_11,Brown Bella,Sodavand,4,2,26,68
+ID_45330_8_30__12_29_11,Brown Bella,Harmonisk,4,2,27,69
+ID_45330_8_30__12_29_11,Brown Bella,Vandet,4,2,28,70
+ID_45330_8_30__12_29_11,Brown Bella,Rengøringsmiddel,4,2,29,71
+ID_45330_8_30__12_29_11,Brown Bella,Blomst,4,2,30,72
+ID_45330_8_30__12_29_11,Brown Bella,Spiritus,4,2,31,73
+ID_45330_8_30__12_29_11,Brown Bella,Mild,4,2,32,74
+ID_45330_8_30__12_29_11,Brown Bella,Humlet,4,2,33,75
+ID_45330_8_30__12_29_11,Brown Bella,Citrus,4,2,34,76
+ID_45330_8_30__12_29_11,Brown Bella,Gran,4,2,35,77
+ID_45330_8_30__12_29_11,Brown Bella,Normal,4,2,36,78
+ID_45330_8_30__12_29_11,Brown Bella,Olie,4,2,37,79
+ID_45330_8_30__12_29_11,Brown Bella,Krydret,4,2,38,80
+ID_45330_8_30__12_29_11,Brown Bella,"Syntetisk ",4,2,39,81
+ID_45330_8_30__12_29_11,Brown Bella,Rund,4,2,40,82
+ID_45330_8_30__12_29_11,Brown Bella,Maltede,4,2,41,83
+ID_45330_8_30__12_29_11,Brown Bella,Skarp,4,2,42,84

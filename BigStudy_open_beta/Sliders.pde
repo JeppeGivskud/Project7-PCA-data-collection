@@ -6,7 +6,7 @@ class Sliders {
   Sliders(String[] Questions) {
     this.Amount=Questions.length;
     for (int i=0; i<this.Amount; i++) {
-      Sliders.add(new Slider(40, 90+i*100, width-300, Questions[i]));
+      Sliders.add(new Slider(40, 140+i*100, width-300, Questions[i]));
     }
     Values = new int[Sliders.size()];
   }
@@ -19,7 +19,14 @@ class Sliders {
     }
     return true;
   }
+
   void Draw() {
+    textAlign(CENTER, CENTER);
+    textSize(25);
+    fill(255);
+    rect(200, 20, width-400, 50,20);
+    fill(0);
+    text("I hvor høj grad er følgende smag til stede i øllen?", 100, 0, width-200, 80);
     for (Slider Slider : Sliders) {
       Slider.Draw();
     }

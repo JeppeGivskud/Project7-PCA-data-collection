@@ -2,7 +2,6 @@ class WelcomeScreen {
   boolean Done= false;
   String WelcomeMessage;
   String SliderQuestion;
-  NavigationButton BackButton = new NavigationButton("Tilbage", width/8, height-75, 2*width/8, 50);
   NavigationButton NextButton = new NavigationButton("Næste", 5*width/8, height-75, 2*width/8, 50);
 
   Slider Slider;
@@ -15,23 +14,21 @@ class WelcomeScreen {
 
   void Draw() {
     textAlign(CENTER, CENTER);
-    textSize(35);
-    text(WelcomeMessage, 0, -width/4, width, height);
+    textSize(25);
+    text(WelcomeMessage, 100, -width/4, width-200, height);
     textSize(25);
     HandleButtons();
 
     if (this.Slider.valueSelected) {
       NextButton.CanBePressed(true);
-      text("Tryk på *næste* når du er klar til at starte forsøget", 0, width/4, width, height);
+      text("Du kan godt ændre dit svar \n Tryk på *næste* når du er klar til at starte forsøget", 0, width/4, width, height);
     }
     Slider.Draw();
   }
   void HandleButtons() {
-    BackButton.Draw();
     NextButton.Draw();
 
     NextButton.CanBePressed(false);
-    BackButton.CanBePressed(false);
   }
 
   void MouseReleased() {

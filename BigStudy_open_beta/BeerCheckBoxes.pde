@@ -19,21 +19,21 @@ class BeerCheckBoxes {
     }
 
     /*//TESTCASE
-    for (BeerCheckBox BeerCheckBox : AllBoxes) {
-      BeerCheckBox.IsChecked=true;
-    }
-    IsBeersChosen=true;
-    for (int i=0; i<AllBoxes.size(); i++) {
-      ChoosenBeers.append(AllBoxes.get(i).Name);
-      println("Appended: "+AllBoxes.get(i).Name);
-    }
-    //END testcase */
+     for (BeerCheckBox BeerCheckBox : AllBoxes) {
+     BeerCheckBox.IsChecked=true;
+     }
+     IsBeersChosen=true;
+     for (int i=0; i<AllBoxes.size(); i++) {
+     ChoosenBeers.append(AllBoxes.get(i).Name);
+     println("Appended: "+AllBoxes.get(i).Name);
+     }
+     //END testcase */
 
     for (int i=0; i<AllBoxes.size(); i++) {
       AllBoxes.get(i).Draw();
       fill(0);
-      textSize(80);
-      text("Click on the beers you want and press continue", 200, 0, width-200, height);
+      textSize(60);
+      text("Vælg de øl din deltager skal vurdere i den rækkefølge de skal præsenteres", 200, 0, width-200, height);
     }
   }
 

@@ -8,8 +8,8 @@ class Screen { //<>//
 
   String Name;
 
-  NavigationButton BackButton = new NavigationButton("Tilbage", width/8, height-75, 2*width/8, 50);
-  NavigationButton NextButton = new NavigationButton("Næste", 5*width/8, height-75, 2*width/8, 50);
+  NavigationButton BackButton = new NavigationButton("Tilbage", width/8, height-85, 2*width/8, 50);
+  NavigationButton NextButton = new NavigationButton("Næste", 5*width/8, height-85, 2*width/8, 50);
 
   Screen(String Name, int questionsPerScreen) {
     this.Name=Name;
@@ -23,11 +23,7 @@ class Screen { //<>//
 
   void Draw() {
     HandleButtons();
-
     SliderGroup.get(this.current_questions).Draw();
-
-    //TESTCASE
-    //current_questions++;
   }
 
   //Buttons

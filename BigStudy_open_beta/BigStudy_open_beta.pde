@@ -6,7 +6,7 @@ boolean ScreensCreated=false;
 void setup() {
   size(1000, 840);
   BeerCheckBoxes = new BeerCheckBoxes();
-  WelcomeScreen = new WelcomeScreen("Velkommen til programmet, \n Du kan ikke ødelægge noget så bare slap rolig, \n Prøv at sætte skalaen til 7", "Jeg er klar til at drikke øl");
+  WelcomeScreen = new WelcomeScreen("Velkommen til forsøget.\n I løbet af forsøget skal du svare på i hvor høj grad en smag er til stede i hver øl du bliver præsenteret. Du får en øl af gangen og skal vurdere 42 spørgsmål per øl, derfor må du gerne spare lidt på øllen, så du ikke løber tør.\n\n Prøv at sætte skalaen til *Ekstremt meget*", "Jeg glæder mig til at drikke øl");
 
   frameRate(60);
 }

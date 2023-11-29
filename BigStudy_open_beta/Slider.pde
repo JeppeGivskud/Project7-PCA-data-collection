@@ -18,13 +18,14 @@ class Slider {
     CreateXPositions();
 
     /*//TESTCASE;
-    this.valueSelected=true;
-    this.Value=round(random(0, this.Markers.size()-1));*/
+     this.valueSelected=true;
+     this.Value=round(random(0, this.Markers.size()-1));
+     //*/
   }
-  
 
-  
-  
+
+
+
   void Draw() {
     strokeWeight(2);
     stroke(200);
@@ -33,7 +34,7 @@ class Slider {
     DrawMarkers();
     textSize(20);
     fill(0);
-    text(this.Question, this.StartX+this.Length/2, this.StartY-40);
+    text(this.Question, this.StartX+this.Length/2, this.StartY-45);
 
     CheckMouse();
     DrawCircle();
@@ -46,7 +47,7 @@ class Slider {
     this.Markers.append("Moderat");
     this.Markers.append("Meget");
     this.Markers.append("Rigtig meget");
-    this.Markers.append("Ekstremt");
+    this.Markers.append("Ekstremt meget");
   }
 
   void CreateXPositions() {
