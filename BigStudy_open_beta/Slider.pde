@@ -35,8 +35,6 @@ class Slider {
     textSize(20);
     fill(0);
     text(this.Question, this.StartX+this.Length/2, this.StartY-45);
-
-    CheckMouse();
     DrawCircle();
   }
 
@@ -73,19 +71,18 @@ class Slider {
       circle(this.Placements[i], this.StartY, 25);
     }
   }
-
-
-  void CheckMouse() {
-    if (mousePressed == true) { //Registers a mousepress and logs the value
-      int extraline=30;
-      if (mouseX  > StartX-extraline  &&  mouseX  <  StartX+Length+extraline
-        && mouseY  >  StartY-extraline  &&  mouseY  <  StartY+extraline) {
-        this.valueSelected=true;
-        //Converts the value from pixel to likert scale
-        this.Value=round(map(mouseX, StartX, StartX+Length, 0, this.Markers.size()-1));
-      }
+  void MouseReleased() {
+    int extraline=30;
+    if (mouseX  > StartX-extraline  &&  mouseX  <  StartX+Length+extraline
+      && mouseY  >  StartY-extraline  &&  mouseY  <  StartY+extraline) {
+      this.valueSelected=true;
+      //Converts the value from pixel to likert scale
+      this.Value=round(map(mouseX, StartX, StartX+Length, 0, this.Markers.size()-1));
     }
   }
+
+
+
 
   void DrawCircle() {
     if (valueSelected) { //If a value is selected convert that value into pixels
@@ -97,7 +94,18 @@ class Slider {
 }
 
 /*
-  void DrawMarkers() { //for each string in Markers
+void CheckMouse() {
+ if (mousePressed == true) { //Registers a mousepress and logs the value
+ int extraline=30;
+ if (mouseX  > StartX-extraline  &&  mouseX  <  StartX+Length+extraline
+ && mouseY  >  StartY-extraline  &&  mouseY  <  StartY+extraline) {
+ this.valueSelected=true;
+ //Converts the value from pixel to likert scale
+ this.Value=round(map(mouseX, StartX, StartX+Length, 0, this.Markers.size()-1));
+ }
+ }
+ }
+ void DrawMarkers() { //for each string in Markers
  textSize(15);
  for (int i = 0; i < this.Markers.size(); i++) {
  fill(0);

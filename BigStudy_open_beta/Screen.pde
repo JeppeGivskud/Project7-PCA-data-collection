@@ -43,6 +43,7 @@ class Screen { //<>//
   void MouseReleased() {
     if (BackButton.IsMouseOverButton()) current_questions--;
     if (NextButton.IsMouseOverButton()) current_questions++;
+    SliderGroup.get(this.current_questions).MouseReleased();
   }
 
   boolean NextScreenRequest() {

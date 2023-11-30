@@ -24,11 +24,17 @@ class Sliders {
     textAlign(CENTER, CENTER);
     textSize(25);
     fill(255);
-    rect(200, 20, width-400, 50,20);
+    rect(200, 20, width-400, 50, 20);
     fill(0);
     text("I hvor høj grad er følgende smag til stede i øllen?", 100, 0, width-200, 80);
     for (Slider Slider : Sliders) {
       Slider.Draw();
+    }
+  }
+
+  void MouseReleased() {
+    for (Slider Slider : Sliders) {
+      Slider.MouseReleased();
     }
   }
 }

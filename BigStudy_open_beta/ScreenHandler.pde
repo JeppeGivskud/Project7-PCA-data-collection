@@ -5,7 +5,7 @@ class ScreenHandler { //<>// //<>// //<>// //<>//
   SaveLong SaveLong;
   boolean exitnow=false;
 
-  InBetweenScreen InBetweenScreen = new InBetweenScreen("Næste øl \n Tryk på næste når du er klar");
+  InBetweenScreen InBetweenScreen = new InBetweenScreen("Du skal have en ny øl \n \n Tryk på næste når du har fået en ny øl");
 
   ScreenHandler(StringList Beers, int questionsPerScreen) {
     for (int i=0; i<Beers.size(); i++) {
@@ -56,8 +56,8 @@ Der er problemer med at gemme dataen og der er problemer med flowet af programme
     textAlign(CENTER, CENTER);
     int BeerNumber = CurrentScreen+1;
     int ScreenNumber = Screens.get(CurrentScreen).current_questions+1;
-    text("Beer "+BeerNumber+"/"+Screens.size(), width/2, height-55);
-    text("Screen "+ScreenNumber+"/"+Screens.get(CurrentScreen).SliderGroup.size(), width/2, height-80);
+    text("Øl "+BeerNumber+"/"+Screens.size(), width/2, height-55);
+    text("Side "+ScreenNumber+"/"+Screens.get(CurrentScreen).SliderGroup.size(), width/2, height-80);
     //rect(0, height-20, (width/Screens.size())/2+(CurrentScreen)*width/Screens.size(), 20);
   }
 

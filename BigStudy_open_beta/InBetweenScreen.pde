@@ -20,6 +20,7 @@ class InBetweenScreen {
   }
 
   void MouseReleased() {
+
     if (NextButton.IsMouseOverButton()) {
       this.Done=true;
       NextButton.CanBePressed=false;

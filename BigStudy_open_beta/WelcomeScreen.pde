@@ -35,6 +35,7 @@ class WelcomeScreen {
     if (NextButton.IsMouseOverButton()) {
       Done=true;
     }
+    this.Slider.MouseReleased();
   }
 
   boolean Done() {
