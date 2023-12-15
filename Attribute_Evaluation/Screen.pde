@@ -1,4 +1,4 @@
-class Screen { //<>//
+class Screen {
   //Table questions; This should be deleted
   String[] Attributes;
   int groupsize=0;

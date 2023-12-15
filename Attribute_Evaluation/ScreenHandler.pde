@@ -1,4 +1,4 @@
-class ScreenHandler { //<>// //<>// //<>// //<>//
+class ScreenHandler { //<>// //<>// //<>//
   ArrayList<Screen> Screens = new ArrayList<Screen>();
   int CurrentScreen=0;
   SaveWide SaveWide;
